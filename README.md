@@ -38,4 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ### Note clone setup
 IDE vscode: settings -> text editor -> file -> assocciation: "*.css": "tailwindcss"
 library UI componentt: https://ui.shadcn.com/docs/components/input
+
 videos: https://www.youtube.com/watch?v=sjm9W5MmGH4&list=PLFfVmM19UNqn1ZIWvxn1artfz-C6dgAFb&index=7
