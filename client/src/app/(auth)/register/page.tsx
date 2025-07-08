@@ -1,5 +1,9 @@
+import {ModeToggle} from "@/components/mode-toggle";
+
 export default function RegisterPage() {
     return (
-        <div>Register page</div>
+        <div>
+            <ModeToggle/>
+            Register page</div>
     )
 }
