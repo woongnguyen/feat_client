@@ -1,6 +1,8 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {Roboto_Condensed} from "next/font/google";
+import {ThemeProvider} from "@/components/theme-provider"
+import Header from "@/components/header";
 
 const roboto_condensed = Roboto_Condensed({subsets: ['vietnamese', "latin"]})
 
@@ -15,11 +17,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
         <body
             className={`${roboto_condensed.className} antialiased`}
         >
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <Header/>
+            {children}
+        </ThemeProvider>
         </body>
         </html>
     );
