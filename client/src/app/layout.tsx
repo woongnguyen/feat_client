@@ -1,10 +1,19 @@
-import type {Metadata} from "next";
-import "./globals.css";
-import {Roboto_Condensed} from "next/font/google";
+import type {Metadata} from "next"
+import "./globals.css"
+import {Roboto_Condensed, Playfair_Display} from "next/font/google"
 import {ThemeProvider} from "@/components/theme-provider"
-import Header from "@/components/header";
+import Header from "@/components/header"
 
-const roboto_condensed = Roboto_Condensed({subsets: ['vietnamese', "latin"]})
+const roboto_condensed = Roboto_Condensed({
+    subsets: ["latin"],
+    display: 'swap',
+    variable: '--font-roboto',
+})
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    display: 'swap',
+    variable: '--font-playfair-display',
+})
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -19,11 +28,11 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <body
-            className={`${roboto_condensed.className} antialiased`}
+            className={`${roboto_condensed.className} ${playfair.variable} antialiased`}
         >
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
         >

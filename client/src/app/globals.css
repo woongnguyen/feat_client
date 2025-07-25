@@ -76,3 +76,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/*css header*/
+
+.--pc-menu > ul li {
+  display: inline-block;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 20px;
+  padding: 12px 10px 16px;
+  width: 20%;
+}
+
+.heading{
+  background: rgb(110, 13, 13);
+}
+.heading p{
+  font-size: 4.5rem;
+  font-family: var(--font-playfair-display);
+  text-align: center;
+  padding: 0 0 18px 0;
+  text-shadow: -2px 2px rgb(110, 13, 13), -3px 3px #eadbce;
+  color: #eadbce;
+}
+/*end css header*/
