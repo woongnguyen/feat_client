@@ -99,4 +99,43 @@
   text-shadow: -2px 2px rgb(110, 13, 13), -3px 3px #eadbce;
   color: #eadbce;
 }
+
 /*end css header*/
+
+/* css background */
+body{
+  background-image: url("/web-style/bg.png");
+  background-repeat: repeat;
+}
+.heading-menu{
+    background-color: #fbecd5;
+}
+.heading-menu h2{
+  color:rgb(99 65 21)
+}
+.heading-menu hr{
+  border-color:rgb(99 65 21);
+  border-top: solid 2px;
+  border-bottom: solid 1px;
+}
+
+/* css custom color  */
+.color-orange{
+  color: rgb(198 95 25)
+}
+.color-orange-2{
+  color: rgb(117 50 4);
+}
+.shadow-style-txt_01{
+  text-shadow: -1px 1px #ffffff, -2px 1px rgb(117, 50, 4);
+}
+.line_style_01{
+  width: 100px;
+  height:2px;
+  background-color:rgb(117 50 4);
+  display: block;
+  margin: 0 auto;
+}
+.gallery-item{
+    float: left;
+}
