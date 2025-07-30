@@ -139,3 +139,10 @@ body{
 .gallery-item{
     float: left;
 }
+.shadow-style-txt_02{
+  text-shadow: -1px 1px rgba(18, 18, 18, 0.87), -2px 1px #E5C282;
+}
+.bg-triple-black {
+  background-color: rgba(18, 18, 18, 0.87);
+}
+
