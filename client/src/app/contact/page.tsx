@@ -13,7 +13,7 @@ export default function ContactPage(){
                     <p className="text-[]">#2 - 623 Carlton Trail, North Battleford, SK, CA, S9A3K2</p>
                     <h4 className="mt-8 font-bold block w-full">Telephone:</h4>
                     <p>306-441-9040</p>
-                    <h4 className="mt-8 font-bold block w-full">Facebook:</h4>
+                    <h4 className="mt-8 font-bold block w-full">Facebook: </h4>
                     <p>Khanh Trần</p>
                 </center>
                 <Image src="/web-style/patterns_02.png" alt="menu right patterns" width="415" height="28" className="mx-auto mt-4"/>
