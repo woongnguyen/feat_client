@@ -1,18 +1,18 @@
 name: Next Deployment
 on:
   push:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   deploy:
-    runs-on: Ubuntu 22.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
-        passwork: ${{secrets.PASS}}
+        password: ${{secrets.PASS}}
         port: 22
         script: |
           cd /home/feat_client
@@ -22,4 +22,3 @@ jobs:
           npm install
           npm run build
           pm2 reload nextjs-UI
-              
