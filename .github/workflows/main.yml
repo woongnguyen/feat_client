@@ -23,6 +23,7 @@ jobs:
           git fetch origin
           git checkout production
           git pull
+          cd client
           npm install
           npm run build
           pm2 reload nextjs-UI
