@@ -1,24 +1,31 @@
 name: Next Deployment
 on:
   push:
-    branches: [ master ]
+    branches: [ production ]
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
     - name: Deploy using ssh
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{secrets.HOST}}
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.PASS}}
-        port: 22
-        script: |
+      env:
+        HOST: ${{secrets.HOST}}
+        USERNAME: ${{secrets.USERNAME}}
+        SSH_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_KEY" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+
+        ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
+        ssh -i ~/.ssh/deploy_key $USERNAME@$HOST << 'EOF'
           cd /home/feat_client
           git fetch origin
-          git checkout master
+          git checkout production
           git pull
           npm install
           npm run build
           pm2 reload nextjs-UI
+        EOF
+
+        rm -f ~/.ssh/deploy_key
