@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 
 export default function ContactPage(){
     return (
@@ -14,7 +15,7 @@ export default function ContactPage(){
                     <h4 className="mt-8 font-bold block w-full">Telephone:</h4>
                     <p>306-441-9040</p>
                     <h4 className="mt-8 font-bold block w-full">Facebook: </h4>
-                    <p>Khanh Trần</p>
+                    <p><Link href="https://www.facebook.com/profile.php?id=61577973737222" target="_blank">Beaver&#39;s Grill Restaurant</Link></p>
                 </center>
                 <Image src="/web-style/patterns_02.png" alt="menu right patterns" width="415" height="28" className="mx-auto mt-4"/>
             </div>
