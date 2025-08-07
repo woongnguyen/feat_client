@@ -23,8 +23,24 @@ const sacramento = Sacramento({
 })
 
 export const metadata: Metadata = {
-    title: "Beaver Grill Asian Restaurant",
-    description: "Best asian Cuisine In Town!",
+    title: "Beaver Grill — A Taste of Home, A World of Flavor",
+    description: "Best Asian cuisine restaurant in town. Great food, friendly service, and a cozy feel - dine in or grab it to go.",
+    openGraph: {
+        title: 'Beaver Grill — A Taste of Home, A World of Flavor',
+        description: 'Best Asian cuisine restaurant in town. Great food, friendly service, and a cozy feel - dine in or grab it to go.',
+        url: 'https://beavergrillnb.com',
+        siteName: 'Beaver Grill Asian Restaurant',
+        images: [
+            {
+                url: '/beaver-grill-asian-restaurant.jpg', // 1200x630px recommended
+                width: 1427,
+                height: 630,
+                alt: 'Beaver Grill — A Taste of Home, A World of Flavor',
+            }
+        ],
+        locale: 'en_CA',
+        type: 'website',
+    }
 };
 
 export default function RootLayout({

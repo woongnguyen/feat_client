@@ -1,8 +1,6 @@
 'use client'
 
 import Link from "next/link";
-import { Menu } from 'lucide-react';
-import Image from "next/image";
 import { useActiveRoute } from "@/hooks/useActiveRoute";
 
 export default function Footer() {
@@ -27,7 +25,7 @@ export default function Footer() {
                 <div className="w-full text-center mt-2">
                     <p>#2 - 623 Carlton Trail, North Battleford, SK, Canada, S9A 3K2</p>
                     <p>Phone: (306) 441 - 9040</p>
-                    <p className="text-[#7A674E] mt-2">Facebook: Khanh Trần</p>
+                    <p className="text-[#7A674E] mt-2">Facebook: <Link href="https://www.facebook.com/profile.php?id=61577973737222" target="_blank">Beaver&#39;s Grill Restaurant</Link></p>
                 </div>
             </div>
         </div>
