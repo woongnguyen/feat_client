@@ -21,7 +21,7 @@ jobs:
         ssh -i ~/.ssh/deploy_key $USERNAME@$HOST << 'EOF'
           cd /home/feat_client
           git fetch --all
-          git reset --hard origin/production
+          git pull
           cd client
           npm install
           npm run build

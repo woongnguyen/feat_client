@@ -8,7 +8,7 @@ export default function Home() {
                 <div className="gallery-item pr-0 md:pr-2 w-full md:w-1/2 xl:w-1/2">
                     <div className="w-full h-[500px] xl:h-[737px] bg-[#FBEDD5]">
                         <span className="font-sacramento text-[60px] md:text-[99px] leading-[4rem] md:leading-[6rem] text-center text-[#C65F19] inline-block text-wrap mt-10 xl:mt-20">Welcome to the Beaver Grill Express!</span>
-                        <span className="block mt-10 md:mt-16 max-w-[400px] text-center mx-auto text-[#6E0D0D] font-playfair text-[35px]">North Battleford's #1 Asian Restaurant on Tripadvisor</span>
+                        <span className="block mt-10 md:mt-16 max-w-[400px] text-center mx-auto text-[#6E0D0D] font-playfair text-[35px]">North Battleford&#39;s #1 Asian Restaurant on Tripadvisor</span>
                     </div>
                     <div className="flex content-around gap-4">
                         <div className="group w-full xl:w-1/3 relative mt-4 overflow-hidden h-[250px] xl:h-[471px]">

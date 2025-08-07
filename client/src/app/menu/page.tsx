@@ -27,7 +27,7 @@ export default function MenuPage(){
                     <div className="block-prod mt-10 flex flex-wrap content-center items-start max-w-[884px] mx-auto">
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/kanpoong-korean-style-chicken.jpg" alt="&quot;Kanpoong&quot; Korean Style Chicken" width="232" height="232"/>
-                            <div className="item_title">"Kanpoong" Korean Style Chicken</div>
+                            <div className="item_title">&quot;Kanpoong&quot; Korean Style Chicken</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Deep-fried chicken breast mixed in Korean sweet & spicy sauce with rice. Choice of spicy or non-spicy.</p>
                             <p className="price">$14.99</p>
@@ -35,7 +35,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/pad-thai.jpg" alt="&quot;Pad Thai&quot;" width="232" height="232"/>
-                            <div className="item_title">"Pad Thai"</div>
+                            <div className="item_title">&quot;Pad Thai&quot;</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">A Thai dish of stir-fried rice noodles with beansprouts and other vegetables, topped with scrambled eggs, crushed *peanuts*, and fresh *cilantro*. Choice of spicy or non-spicy.</p>
                             <p className="price">$14.99</p>
@@ -88,7 +88,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/korean-veggie-glass-noodle-japchae.jpg" alt="Korean Veggie Glass Noodle &quot;Japchae&quot;" width="232" height="232"/>
-                            <div className="item_title">Korean Veggie Glass Noodle "Japchae"</div>
+                            <div className="item_title">Korean Veggie Glass Noodle &quot;Japchae&quot;</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Potato starch noodles with stir-fried vegetable. One of the best beloved Korean dishes. Flavored with sesame oil and served with rice.</p>
                             <p className="price">$14.99</p>
@@ -239,7 +239,7 @@ export default function MenuPage(){
                     <div className="block-prod mt-10 flex flex-wrap content-center items-start max-w-[884px] mx-auto">
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/kan-poong-chicken-box.jpg" alt="&quot;Kan Poong&quot; Chicken Box" width="232" height="232"/>
-                            <div className="item_title">"Kan Poong" Chicken Box</div>
+                            <div className="item_title">&quot;Kan Poong&quot; Chicken Box</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Deep-fried chicken breast in Korean sweet & spicy sauce with deep-fried pork dumplings, spicy mayo dipping sauce, rice and green salad drizzled with honey lemon dressing.</p>
                             <p className="price">$23.50</p>
@@ -247,14 +247,14 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/beef-teriyaki-box.jpg" alt="Beef &quot;Teriyaki&quot; Box" width="232" height="232"/>
-                            <div className="item_title">Beef "Teriyaki" Box</div>
+                            <div className="item_title">Beef &quot;Teriyaki&quot; Box</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Sautéed beef on a bed of stir-fried vegetables with teriyaki sauce, with deep-fried prawn, pork dumpling, rice and green salad drizzled with honey lemon dressing.</p>
                             <p className="price">$24.50</p>
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/chicken-teriyaki-box.jpg" alt="Chicken &quot;Teriyaki&quot; Box" width="232" height="232"/>
-                            <div className="item_title">Chicken "Teriyaki" Box</div>
+                            <div className="item_title">Chicken &quot;Teriyaki&quot; Box</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Grilled chicken on a bed of stir-fried vegetables with teriyaki sauce, with deep-fried prawn, pork dumpling, rice and green salad drizzled with honey lemon dressing.</p>
                             <p className="price">$23.50</p>
@@ -413,7 +413,7 @@ export default function MenuPage(){
                     <div className="block-prod mt-10 flex flex-wrap content-center items-start max-w-[884px] mx-auto">
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/bibimbap-korean-mixed-rice.jpg" alt="&quot;Bibimbap&quot; Korean Mixed Rice" width="232" height="232"/>
-                            <div className="item_title">"Bibimbap" Korean Mixed Rice</div>
+                            <div className="item_title">&quot;Bibimbap&quot; Korean Mixed Rice</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Rice topped with chopped lettuce, stir-fried vegetables, sautéed beef, sesame seeds, sesame oil, sweet & spicy or teriyaki sauce with a sunny side fried egg on top.</p>
                             <p className="price">$19.50</p>
@@ -426,7 +426,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/teriyaki-japanese-style-meat-with-rice.jpg" alt="&quot;Teriyaki&quot; Japanese Style Meat with Rice" width="232" height="232"/>
-                            <div className="item_title">"Teriyaki" Japanese Style Meat with Rice</div>
+                            <div className="item_title">&quot;Teriyaki&quot; Japanese Style Meat with Rice</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Choice of meat with stir-fried vegetables in teriyaki sauce served with rice.</p>
                             <p className="price">$16.50 - $18.50</p>
@@ -443,7 +443,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/kanpoong-korean-style-chicken.jpg" alt="&quot;Kanpoong&quot; Korean Style Chicken" width="232" height="232"/>
-                            <div className="item_title">"Kanpoong" Korean Style Chicken</div>
+                            <div className="item_title">&quot;Kanpoong&quot; Korean Style Chicken</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Deep-fried chicken breast mixed in Korean sweet & spicy sauce with rice. Choice of spicy or non-spicy.</p>
                             <p className="price">$18.50</p>
@@ -452,7 +452,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/jeayuk-dupbap-korean-spicy-pork.jpg" alt="&quot;Jeayuk Dupbap&quot; Korean Spicy Pork" width="232" height="232"/>
-                            <div className="item_title">"Jeayuk Dupbap" Korean Spicy Pork</div>
+                            <div className="item_title">&quot;Jeayuk Dupbap&quot; Korean Spicy Pork</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Korean spicy stir-fried pork with vegetables and rice.</p>
                             <p className="price">$18.50</p>
@@ -506,7 +506,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/indonesian-nasi-goreng.jpg" alt="Indonesian &quot;Nasi Goreng&quot;" width="232" height="232"/>
-                            <div className="item_title">Indonesian "Nasi Goreng"</div>
+                            <div className="item_title">Indonesian &quot;Nasi Goreng&quot;</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Indonesian style spicy stir-fried rice with vegetables, chicken and *shrimp*, topped with fresh *cilantro*, crushed *peanuts* and scrambled egg.</p>
                             <p className="price">$22.50</p>
@@ -594,7 +594,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/vietnamese-vermicelli-noodle-bowl-bun-bo-xao.jpg" alt="Vietnamese Vermicelli Noodle Bowl &quot;Bun Bo Xao&quot;" width="232" height="232"/>
-                            <div className="item_title">Vietnamese Vermicelli Noodle Bowl "Bun Bo Xao"</div>
+                            <div className="item_title">Vietnamese Vermicelli Noodle Bowl &quot;Bun Bo Xao&quot;</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Vermicelli noodles with lettuce. beansprouts, cilantro, mushrooms, fish sauce, and spring rolls, topped with crushed *peanuts* and fresh *cilantro*.</p>
                             <p className="price">$15.50 - $17.50</p>
@@ -638,7 +638,7 @@ export default function MenuPage(){
                     <div className="block-prod mt-10 flex flex-wrap content-center items-start max-w-[884px] mx-auto">
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/vietnamese-rice-noodle-soup-pho.jpg" alt="Vietnamese Rice Noodle Soup &quot;Pho&quot;" width="232" height="232"/>
-                            <div className="item_title">Vietnamese Rice Noodle Soup "Pho"</div>
+                            <div className="item_title">Vietnamese Rice Noodle Soup &quot;Pho&quot;</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Homemade beef broth with beef and pork, bean sprouts and onions, topped with fresh *cilantro* and a lemon slice.</p>
                             <p className="price">$16.50 - $18.50</p>
@@ -665,7 +665,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/thai-tom-yum-hot-and-sour-noodle-soup.jpg" alt="Thai &quot;Tom Yum&quot; Hot & Sour Noodle Soup" width="232" height="232"/>
-                            <div className="item_title">Thai "Tom Yum" Hot & Sour Noodle Soup</div>
+                            <div className="item_title">Thai &quot;Tom Yum&quot; Hot & Sour Noodle Soup</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Variety of vegetables with rice noodles in spicy and sour soup.</p>
                             <p className="price">$15.50 - $17.50</p>
@@ -688,7 +688,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/mandoo-gook-korean-wonton-soup.jpg" alt="&quot;Mandoo Gook&quot; Korean Wonton Soup" width="232" height="232"/>
-                            <div className="item_title">"Mandoo Gook" Korean Wonton Soup</div>
+                            <div className="item_title">&quot;Mandoo Gook&quot; Korean Wonton Soup</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">*Shrimp*, chicken, pork and vegetable mixed dumplings in a homemade beef broth.</p>
                             <p className="price">$15.50</p>
@@ -711,7 +711,7 @@ export default function MenuPage(){
                     <div className="block-prod mt-10 flex flex-wrap content-center items-start max-w-[884px] mx-auto">
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/japchae-bap-korean-glass-noodle-with-rice.jpg" alt="&quot;Japchae Bap&quot; Korean Glass Noodle with Rice" width="232" height="232"/>
-                            <div className="item_title">"Japchae Bap" Korean Glass Noodle with Rice</div>
+                            <div className="item_title">&quot;Japchae Bap&quot; Korean Glass Noodle with Rice</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Potato starch noodles with stir-fried vegetables. One of the best beloved Korean dishes. Flavored with sesame oil and served with rice.</p>
                             <p className="price">$15.50 - $18.50</p>
@@ -740,7 +740,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/thai-tom-yum-hot-and-sour-noodle-soup.jpg" alt="Thai &quot;Tom Yum&quot; Hot & Sour Noodle Soup" width="232" height="232"/>
-                            <div className="item_title">Thai "Tom Yum" Hot & Sour Noodle Soup</div>
+                            <div className="item_title">Thai &quot;Tom Yum&quot; Hot & Sour Noodle Soup</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">Variety of vegetables with rice noodles in spicy and sour soup.</p>
                             <p className="price">$15.50 - $17.50</p>
@@ -765,7 +765,7 @@ export default function MenuPage(){
                         </div>
                         <div className="item w-1/2 lg:w-1/3">
                             <Image src="/products/pad-thai-noodle-dish.jpg" alt="&quot;Pad Thai&quot; Noodle Dish" width="232" height="232"/>
-                            <div className="item_title">"Pad Thai" Noodle Dish</div>
+                            <div className="item_title">&quot;Pad Thai&quot; Noodle Dish</div>
                             <span className="line_style_02"></span>
                             <p className="item_remark">A Thai dish of stir-fried rice noodles with beansprouts and other vegetables, topped with scrambled eggs, crushed *peanuts*, and fresh *cilantro*</p>
                             <p className="price">$15.50 - $19.50</p>
@@ -838,7 +838,7 @@ export default function MenuPage(){
                 <div className="block-menu">
                     <div className="block-header">
                         <center>
-                            <h3 className="text-4xl mt-8 md:mt-12 color-orange-2 shadow-style-txt_01 mb-6">Kid's Menu</h3>
+                            <h3 className="text-4xl mt-8 md:mt-12 color-orange-2 shadow-style-txt_01 mb-6">Kid&#39;s Menu</h3>
                             <span className="line_style_01 md:mb-5"></span>
                             <p className="color-orange">*Food Allergy Notice* Please be advised that food prepared here may contain: milk, eggs, wheat, soybean, peanuts, tree nuts, fish and shellfish.</p>
                         </center>

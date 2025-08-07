@@ -23,6 +23,7 @@ const sacramento = Sacramento({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
     title: "Beaver Grill — A Taste of Home, A World of Flavor",
     description: "Best Asian cuisine restaurant in town. Great food, friendly service, and a cozy feel - dine in or grab it to go.",
     openGraph: {
