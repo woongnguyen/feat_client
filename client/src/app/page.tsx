@@ -42,6 +42,37 @@ export default function Home() {
                 </div>
             </section>
             <MenuSection/>
+            <section className="contact" id="contact">
+                <div className="container">
+                    <h2 className="section-title" style={{ color: 'white' }}>Visit Us</h2>
+                    <div className="contact-grid">
+                        <div className="contact-item">
+                            <h3>Location</h3>
+                            <p>
+                                123 Grill Street<br />
+                                Downtown District<br />
+                                Your City, YC 12345
+                            </p>
+                        </div>
+                        <div className="contact-item">
+                            <h3>Hours</h3>
+                            <p>
+                                Monday - Thursday: 5pm - 10pm<br />
+                                Friday - Saturday: 5pm - 11pm<br />
+                                Sunday: 4pm - 9pm
+                            </p>
+                        </div>
+                        <div className="contact-item">
+                            <h3>Contact</h3>
+                            <p>
+                                Phone: (555) 123-4567<br />
+                                Email: hello@beavergrill.com<br />
+                                Reservations recommended
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
