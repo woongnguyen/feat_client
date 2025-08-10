@@ -41,6 +41,23 @@ export const metadata: Metadata = {
         ],
         locale: 'en_CA',
         type: 'website',
+    },
+    // Additional metadata
+    keywords: ['restaurant', 'grill', 'lunch', 'dining', 'modern cuisine', 'beavergrill'],
+    authors: [{ name: 'BeaverGrill Team' }],
+    creator: 'BeaverGrill',
+    publisher: 'BeaverGrill Restaurant',
+    // Robots
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     }
 };
 
