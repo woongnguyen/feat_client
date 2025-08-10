@@ -57,9 +57,8 @@ export default function Home() {
                         <div className="contact-item">
                             <h3 className="font-playfair">Hours</h3>
                             <p>
-                                Monday - Thursday: 5pm - 10pm<br />
-                                Friday - Saturday: 5pm - 11pm<br />
-                                Sunday: 4pm - 9pm
+                                Monday - Sunday: 11AM - 8PM<br />
+                                Holidays: Closed
                             </p>
                         </div>
                         <div className="contact-item">

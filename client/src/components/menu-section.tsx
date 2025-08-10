@@ -106,7 +106,7 @@ export default function MenuSection() {
             title: 'Dumplings',
             subtitle: "(5 pcs) with Spicy Mayo Sauce",
             image: '/products/dumplings.jpg',
-            tag: 'TONIGHT',
+            tag: 'SPICY',
             tagType: 'event'
         },
         {
@@ -114,7 +114,7 @@ export default function MenuSection() {
             title: 'Spring Rolls',
             subtitle: '(2pcs) with Sweet Chili *contains nuts*',
             image: '/products/spring-rolls.jpg',
-            tag: '50% OFF',
+            tag: 'PACKED',
             tagType: 'promo'
         },
         {
