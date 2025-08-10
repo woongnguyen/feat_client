@@ -9,7 +9,7 @@ export default function Home() {
         <main>
             <section className="hero" id="home">
                 <div className="hero-content">
-                    <h1>Welcome to BeaverGrill</h1>
+                    <h1 className="font-playfair">Welcome to BeaverGrill</h1>
                     <p>Where Modern Dining Meets Exceptional Flavor<br></br>A Taste of Home, A World of Flavor</p>
                     <div className="hero-buttons">
                         <Link href="/menu">Menu</Link>
@@ -17,9 +17,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="about bg-white" id="about">
+            <section className="about bg-[#f5f5f5]" id="about">
                 <div className="container">
-                    <h2 className="section-title">Our Story</h2>
+                    <h2 className="section-title font-sacramento">Our Story</h2>
                     <div className="about-grid">
                         <div className="about-text">
                             <h3>Modern Grilling Excellence</h3>
@@ -42,20 +42,20 @@ export default function Home() {
                 </div>
             </section>
             <MenuSection/>
-            <section className="contact" id="contact">
+            <section className="contact bg-[#1a1a1a]" id="contact">
                 <div className="container">
-                    <h2 className="section-title" style={{ color: 'white' }}>Visit Us</h2>
+                    <h2 className="section-title font-sacramento text-white">Visit Us</h2>
                     <div className="contact-grid">
                         <div className="contact-item">
-                            <h3>Location</h3>
+                            <h3 className="font-playfair">Location</h3>
                             <p>
-                                123 Grill Street<br />
-                                Downtown District<br />
-                                Your City, YC 12345
+                                #2 - 623 Carlton Trail,<br />
+                                North Battleford<br />
+                                SK, Canada, S9A 3K2
                             </p>
                         </div>
                         <div className="contact-item">
-                            <h3>Hours</h3>
+                            <h3 className="font-playfair">Hours</h3>
                             <p>
                                 Monday - Thursday: 5pm - 10pm<br />
                                 Friday - Saturday: 5pm - 11pm<br />
@@ -63,10 +63,10 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="contact-item">
-                            <h3>Contact</h3>
+                            <h3 className="font-playfair text-[#]">Contact</h3>
                             <p>
-                                Phone: (555) 123-4567<br />
-                                Email: hello@beavergrill.com<br />
+                                Phone:(306) 441-9040<br />
+                                Email: beavergrillnb@gmail.com<br />
                                 Reservations recommended
                             </p>
                         </div>

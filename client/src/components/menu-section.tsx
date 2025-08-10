@@ -28,102 +28,117 @@ export default function MenuSection() {
     const menuItems: MenuItem[] = [
         {
             id: 1,
-            name: 'Signature Ribeye',
-            description: '28-day aged ribeye with truffle butter and roasted vegetables',
-            price: 45,
-            image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop',
-            category: 'Mains'
+            name: '"Kanpoong" Korean Style Chicken',
+            description: 'Deep-fried chicken breast mixed in Korean sweet & spicy sauce with rice. Choice of spicy or non-spicy.',
+            price: 14.99,
+            image: '/products/kanpoong-korean-style-chicken.jpg',
+            category: 'Lunch Specials'
         },
         {
             id: 2,
-            name: 'Beaver Burger',
-            description: 'Double wagyu patty with caramelized onions and special sauce',
-            price: 28,
-            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop',
-            category: 'Mains'
+            name: '"Pad Thai"',
+            description: 'A Thai dish of stir-fried rice noodles with beansprouts and other vegetables, topped with scrambled eggs, crushed *peanuts*, and fresh *cilantro*. Choice of spicy or non-spicy.',
+            price: 14.99,
+            image: '/products/pad-thai.jpg',
+            category: 'Lunch Specials'
         },
         {
             id: 3,
-            name: 'Grilled Caesar',
-            description: 'Charred romaine with house-made dressing and parmesan crisps',
-            price: 18,
-            image: 'https://images.unsplash.com/photo-1512852939750-1305098529bf?w=400&h=300&fit=crop',
-            category: 'Starters'
+            name: 'Vietnamese Rice Noodle Soup "Pho"',
+            description: 'Homemade beef broth with beef and pork, bean sprouts and onions, topped with fresh *cilantro* and a lemon slice.',
+            price: 17.50,
+            image: '/products/vietnamese-rice-noodle-soup-pho.jpg',
+            category: 'Soup'
         },
         {
             id: 4,
-            name: 'BBQ Ribs',
-            description: 'Slow-smoked ribs with our signature bourbon glaze',
-            price: 32,
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-            category: 'Mains'
+            name: 'Indian Butter Chicken',
+            description: 'Chicken breast in creamy Indian curry sauce with rice & naan.',
+            price: 14.99,
+            image: '/products/indian-butter-chicken.jpg',
+            category: 'Lunch Specials'
         },
         {
             id: 5,
-            name: 'Grilled Prawns',
-            description: 'Jumbo prawns with garlic butter and fresh herbs',
-            price: 26,
-            image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop',
-            category: 'Starters'
+            name: 'Thai "Tom Yum" Hot & Sour Noodle Soup',
+            description: 'Variety of vegetables with rice noodles in spicy and sour soup.',
+            price: 15.50,
+            image: '/products/thai-tom-yum-hot-and-sour-noodle-soup.jpg',
+            category: 'Soup'
         },
         {
             id: 6,
-            name: 'Smoked Chocolate Tart',
-            description: 'Dark chocolate tart with a hint of smoke and vanilla ice cream',
-            price: 12,
-            image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop',
-            category: 'Desserts'
+            name: 'Chicken Nuggets, Fries, Gravy',
+            description: '',
+            price: 8.50,
+            image: '/products/chicken-nuggets-fries-gravy.jpg',
+            category: 'Kids Menu'
+        },
+        {
+            id: 7,
+            name: 'Chicken Strips & Fries',
+            description: 'With gravy',
+            price: 10.50,
+            image: '/products/chicken-strips-and-fries.jpg',
+            category: 'Kids Menu'
         }
     ];
 
     const galleryItems: GalleryItem[] = [
         {
             id: 1,
-            title: 'Prime Night Experience',
-            subtitle: 'Only 10 tables left this Friday!',
-            image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop',
+            title: '"Kan Poong" Chicken Box',
+            subtitle: 'Deep-fried chicken breast in Korean sweet & spicy sauce with deep-fried pork dumplings, spicy mayo dipping sauce, rice and green salad drizzled with honey lemon dressing.',
+            image: '/products/kan-poong-chicken-box.jpg',
             tag: 'BESTSELLER',
-            tagType: 'hot',
-            size: 'large'
+            tagType: 'hot'
         },
         {
             id: 2,
-            title: "Chef's Special",
-            subtitle: 'Limited time only',
-            image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&h=300&fit=crop',
+            title: "Dry Ribs & Caesar Salad",
+            subtitle: 'Dry Ribs & Caesar Salad',
+            image: '/products/dry-ribs-&-caesar-salad.jpg',
             tag: 'NEW',
             tagType: 'new'
         },
         {
             id: 3,
-            title: 'Live Music',
-            subtitle: "8PM - Don't miss out!",
-            image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=300&fit=crop',
+            title: 'Dumplings',
+            subtitle: "(5 pcs) with Spicy Mayo Sauce",
+            image: '/products/dumplings.jpg',
             tag: 'TONIGHT',
             tagType: 'event'
         },
         {
             id: 4,
-            title: 'Wine Wednesday',
-            subtitle: 'Today only!',
-            image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop',
+            title: 'Spring Rolls',
+            subtitle: '(2pcs) with Sweet Chili *contains nuts*',
+            image: '/products/spring-rolls.jpg',
             tag: '50% OFF',
             tagType: 'promo'
         },
         {
             id: 5,
-            title: 'Full House',
-            subtitle: 'Reserve now!',
-            image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop',
+            title: 'Fish & Chips',
+            subtitle: 'Homemade battered Basa fish with French fries.',
+            image: '/products/fish-and-chips.jpg',
             tag: 'PACKED',
             tagType: 'hot'
         },
         {
             id: 6,
-            title: 'VIP Experience',
-            subtitle: '2 tables left this month',
-            image: 'https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=800&h=600&fit=crop',
+            title: 'Chicken "Teriyaki" Box',
+            subtitle: 'Grilled chicken on a bed of stir-fried vegetables with teriyaki sauce, with deep-fried prawn, pork dumpling, rice and green salad drizzled with honey lemon dressing.',
+            image: '/products/chicken-teriyaki-box.jpg',
             tag: 'EXCLUSIVE',
+            tagType: 'exclusive',
+        },
+        {
+            id: 7,
+            title: '"Com Tam" Vietnamese Broken R𝗥ice',
+            subtitle: 'Served on a generous plate, this dish begins with soft, fragrant broken rice - tender yet slightly chewy, soaking up every drop of flavour. Beside it rests a juicy 𝙜𝙧𝙞𝙡𝙡𝙚𝙙 𝙥𝙤𝙧𝙠 𝙘𝙝𝙤𝙥, charred to perfection, alongside a golden slice of Vietnamese 𝙚𝙜𝙜 𝙢𝙚𝙖𝙩𝙡𝙤𝙖𝙛, and a 𝙨𝙪𝙣𝙣𝙮-𝙨𝙞𝙙𝙚-𝙪𝙥 𝙚𝙜𝙜 with its yolk glistening. Add a handful of crisp cucumber and tomato, tangy pickled vegetables, and a small bowl of sweet-savory fish sauce, and you’ve got a meal that captures the soul of Vietnam.',
+            image: '/products/com-tam.jpg',
+            tag: 'RICE DISHES',
             tagType: 'exclusive',
             size: 'large'
         }
@@ -137,9 +152,9 @@ export default function MenuSection() {
         <div className="wrap-menu_and_gallery">
             <section className="menu" id="menu">
                 <div className="container">
-                    <h2 className="section-title">Our Menu</h2>
+                    <h2 className="section-title font-sacramento">Our Menu</h2>
                     <div className="menu-categories">
-                        {['All', 'Starters', 'Mains', 'Desserts'].map((category) => (
+                        {['All', 'Lunch Specials', 'Soup', 'Kids Menu'].map((category) => (
                             <button
                                 key={category}
                                 className={`category-btn ${activeCategory === category ? 'active' : ''}`}
@@ -165,9 +180,9 @@ export default function MenuSection() {
                     </div>
                 </div>
             </section>
-            <section className="gallery" id="gallery">
+            <section className="gallery bg-neutral-900" id="gallery">
                 <div className="container">
-                    <h2 className="section-title">Moments You&#39;re Missing</h2>
+                    <h2 className="section-title font-sacramento !mb-6">Moments You&#39;re Missing</h2>
                     <p className="gallery-subtitle">Join the experience everyone&#39;s talking about</p>
 
                     {/* Limited Time Banner */}
@@ -206,8 +221,8 @@ export default function MenuSection() {
                         <h3 className="cta-title">Don&#39;t Miss Your Chance!</h3>
                         <p className="cta-subtitle">Tables filling up fast - Average wait time: 2 weeks</p>
                         <div className="cta-buttons">
-                            <a href="#" className="btn btn-urgent">Reserve Now - Skip the Wait</a>
-                            <p className="availability-notice">⏰ Only 3 tables left for this weekend!</p>
+                            <a href="https://www.instagram.com/beavergrillnb/" className="btn btn-urgent" target="_blank">Find Us in Instagram</a>
+                            <p className="availability-notice">⏰ Follow us for sneak peeks and the full reveal.</p>
                         </div>
                     </div>
                 </div>
