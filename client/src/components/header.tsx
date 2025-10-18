@@ -13,6 +13,7 @@ import {
     SheetTrigger,
     SheetClose,
 } from "@/components/ui/sheet"
+import { ModeToggle } from './mode-toggle';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,9 @@ export default function Header() {
             <div className="--pc-menu w-full hidden md:hidden lg:block">
                 <nav id="navbar" className={isScrolled ? 'scrolled' : ''}>
                     <div className="nav-container">
-                        <a href="#home" className="logo w-[87px] h-[48px] relative overflow-hidden" onClick={smoothScroll}>
+                        <Link href="/" className="logo w-[87px] h-[48px] relative overflow-hidden">
                             <Image src="/logo.png" alt="BeaverGrillnb" fill className="object-cover"/>
-                        </a>
+                        </Link>
                         <ul className="nav-links">
                             <li><Link href="/">Home</Link></li>
                             <li><a href="#about" onClick={smoothScroll}>About</a></li>
@@ -50,26 +51,22 @@ export default function Header() {
                             <li><a href="#gallery" onClick={smoothScroll}>Gallery</a></li>
                             <li><Link href="/order">Online Order</Link></li>
                             <li><Link href="/contact">Contact</Link></li>
-                            <li><a href="#" className="reserve-btn">Reserve Table</a></li>
                         </ul>
-                        <button className="menu-toggle">☰</button>
+                        <div className="flex justify-center items-center">
+                            <ul className="block list-none mr-2">
+                                <li className="inline-block mr-2">
+                                    <Link href="/login">Login</Link>
+                                </li>
+                                <li className="inline-block">
+                                    <Link href="/register">Register</Link>
+                                </li>
+                            </ul>
+                            <ModeToggle/>
+                        </div>
                     </div>
                 </nav>
-                {/*<ul className="block text-center">*/}
-                {/*    <li>*/}
-                {/*        <Link href="/">Home</Link>*/}
-                {/*    </li>*/}
-                {/*    <li>*/}
-                {/*        <Link href="/menu">Menu</Link>*/}
-                {/*    </li>*/}
-                {/*    <li>*/}
-                {/*        <Link href="/order">Online Order</Link>*/}
-                {/*    </li>*/}
-                {/*    <li>*/}
-                {/*        <Link href="/contact">Contact</Link>*/}
-                {/*    </li>*/}
-                {/*</ul>*/}
             </div>
+
             <div className="--sp-menu w-full md:show lg:hidden text-center max-sm:p-2">
                 <a href="/" className="inline-block mt-2.5">
                     <Image src="/logo.png" alt="Logo" width={56} height={56} />
@@ -109,18 +106,6 @@ export default function Header() {
                     </SheetContent>
                 </Sheet>
             </div>
-            <div className="--register absolute top-0 right-10 hidden">
-                    <ul>
-                        <li>
-                            <Link href="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link href="/register">Register</Link>
-                        </li>
-
-                    </ul>
-                    {/*<ModeToggle />*/}
-                </div>
         </div>
     )
 }

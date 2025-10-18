@@ -62,7 +62,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="contact-item">
-                            <h3 className="font-playfair text-[#]">Contact</h3>
+                            <h3 className="font-playfair text-white">Contact</h3>
                             <p>
                                 Phone:(306) 441-9040<br />
                                 Email: beavergrillnb@gmail.com<br />

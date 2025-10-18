@@ -4,6 +4,9 @@ import {Roboto_Condensed, Playfair_Display, Sacramento} from "next/font/google"
 import {ThemeProvider} from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { Toaster } from "@/components/ui/sonner"
+import AppProvider from "@/app/app-provider"
+import {cookies} from "next/headers";
 
 const roboto_condensed = Roboto_Condensed({
     subsets: ["latin"],
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
         type: 'website',
     },
     // Additional metadata
-    keywords: ['restaurant', 'grill', 'lunch', 'dining', 'modern cuisine', 'beavergrill'],
+    keywords: ['restaurant', 'grill', 'lunch', 'dining', 'modern cuisine', 'north battleford restaurant'],
     authors: [{ name: 'BeaverGrill Team' }],
     creator: 'BeaverGrill',
     publisher: 'BeaverGrill Restaurant',
@@ -62,10 +65,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+   children
+}: Readonly<{
     children: React.ReactNode;
 }>) {
+    const cookieStore = cookies()
+    const sessionToken = cookieStore.get('sessionToken')
     return (
         <html lang="en" suppressHydrationWarning>
         <body
@@ -78,9 +83,12 @@ export default function RootLayout({
             disableTransitionOnChange
         >
             <Header/>
-            {children}
+            <AppProvider initialSessionToken={sessionToken?.value}>
+                {children}
+            </AppProvider>
             <Footer/>
         </ThemeProvider>
+        <Toaster />
         </body>
         </html>
     );

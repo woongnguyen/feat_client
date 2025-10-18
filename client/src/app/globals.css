@@ -101,10 +101,6 @@
 /*end css header*/
 
 /* css background */
-body{
-  background-image: url("/web-style/bg.png");
-  background-repeat: repeat;
-}
 .heading-menu{
     background-color: #fbecd5;
 }

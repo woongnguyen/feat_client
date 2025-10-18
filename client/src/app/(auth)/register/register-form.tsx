@@ -26,17 +26,15 @@ export default function RegisterForm() {
             confirmPassword: ""
         },
     })
-    function onSubmit(values: RegisterBodyType) {
-        fetch(`${envConfig.NEXT_PUBLIC_API_ENDPOINT}/auth/register`, {
+    async function onSubmit(values: RegisterBodyType) {
+        const result = await fetch(`${envConfig.NEXT_PUBLIC_API_ENDPOINT}/auth/register`, {
             method: "POST",
             body: JSON.stringify(values),
             headers: {
                 'content-type': 'application/json',
             }
-        }).then(res => {
-            const data = res.json()
-            console.log(data)
-        })
+        }).then(res => res.json())
+        console.log(result)
     }
     return (
         <div>

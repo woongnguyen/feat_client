@@ -11,7 +11,7 @@ export default function ContactPage(){
                 <hr className="block h-2 basis-full mt-2" />
                 <center className="w-full mt-6 font-playfair text-[#7A674E] text-[20px]">
                     <h4 className="font-bold block w-full">Address:</h4>
-                    <p className="text-[]">#2 - 623 Carlton Trail, North Battleford, SK, CA, S9A3K2</p>
+                    <p>#2 - 623 Carlton Trail, North Battleford, SK, CA, S9A3K2</p>
                     <h4 className="mt-8 font-bold block w-full">Telephone:</h4>
                     <p>306-441-9040</p>
                     <h4 className="mt-8 font-bold block w-full">Facebook: </h4>
