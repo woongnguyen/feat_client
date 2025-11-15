@@ -14,12 +14,11 @@ import {
 import { Input } from "@/components/ui/input"
 import { toast } from "sonner"
 import {LoginBody, LoginBodyType} from "@/schemaValidations/auth.schema";
-import envConfig from "@/config";
-import {useAppContext} from "@/app/app-provider";
-
+import authApiRequests from "@/apiRequests/auth";
+import {useRouter} from "next/navigation";
 
 export default function LoginForm() {
-    const {setSessionToken} = useAppContext()
+    const route= useRouter()
     const form = useForm<LoginBodyType>({
         resolver: zodResolver(LoginBody),
         defaultValues: {
@@ -29,44 +28,10 @@ export default function LoginForm() {
     })
     async function onSubmit(values: LoginBodyType) {
         try{
-            const result = await fetch(`${envConfig.NEXT_PUBLIC_API_ENDPOINT}/auth/login`, {
-                method: "POST",
-                body: JSON.stringify(values),
-                headers: {
-                    'content-type': 'application/json',
-                }
-            }).then(async (req)=>{
-                const payload = await req.json();
-                const data = {
-                    status: req.status,
-                    payload
-                }
-                if (!req.ok){
-                    throw data
-                }
-                return data
-            })
+            const result = await authApiRequests.login(values)
             toast(result?.payload?.message)
-            const ResultFromNextServer = await fetch('/api/auth',{
-                method: "POST",
-                body: JSON.stringify({
-                    payload: {data: {token: result?.payload?.data?.token}}
-                }),
-                headers: {
-                    "content-type": "application/json",
-                }
-            }).then(async (req)=>{
-                const payload = await req.json();
-                const data = {
-                    status: req.status,
-                    payload
-                }
-                if (!req.ok){
-                    throw data
-                }
-                return data
-            })
-            setSessionToken(ResultFromNextServer.payload.data.token)
+            await authApiRequests.auth({sessionToken: result.payload.data.token})
+            route.push('/me')
         }
         catch (error: unknown) {
             if (error && typeof error === 'object' && 'payload' in error && 'status' in error) {
