@@ -1,16 +1,39 @@
 import envConfig from "@/config";
 import {LoginResType} from "@/schemaValidations/auth.schema";
+import {normalizePath} from "@/lib/utils";
 
 type CustomOptions = Omit<RequestInit, 'body'> & {
     baseUrl? : string | undefined
     body?: unknown
 }
 
-class HttpError<T = unknown> extends Error {
+export class HttpError<T = unknown> extends Error {
     status: number
     payload: T | undefined
     constructor({status, payload}: {status: number; payload: T | undefined}) {
         super('Http Error')
+        this.status = status
+        this.payload = payload
+    }
+}
+type EntityErrorPayload = {
+    message: string
+    errors: {
+        field: string
+        message: string
+    }[]
+}
+export class EntityError extends HttpError {
+    status: 422
+    payload: EntityErrorPayload
+    constructor({
+                    status,
+                    payload
+                }: {
+        status: 422
+        payload: EntityErrorPayload
+    }) {
+        super({ status, payload })
         this.status = status
         this.payload = payload
     }
@@ -58,10 +81,14 @@ const request = async <Response> (
     if (!res.ok) {
         throw new HttpError(data)
     }
-    if(['auth/login', 'auth/register'].includes(url)) {
-        clientSessionToken.value = (payload as LoginResType).data.token
-    }else if (url === 'auth/logout') {
-        clientSessionToken.value = ''
+    // đảm bảo chỉ chạy trên client side (brơwser)
+    if (typeof window !== 'undefined') {
+        if(['auth/login', 'auth/register'].some(item => item === normalizePath(url))) {
+            clientSessionToken.value = (payload as LoginResType).data.token
+        }else if (normalizePath(url) === 'auth/logout') {
+            clientSessionToken.value = ''
+        }
+
     }
     return data
 }

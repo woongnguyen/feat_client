@@ -14,6 +14,7 @@ import {
     SheetClose,
 } from "@/components/ui/sheet"
 import { ModeToggle } from './mode-toggle';
+import BtnLogout from "@/components/btn-logout";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +30,7 @@ export default function Header() {
 
     const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        const targetId = e.currentTarget.getAttribute('href')?.slice(1);
+        const targetId = e.currentTarget.getAttribute('data-href');
         if (targetId) {
             const target = document.getElementById(targetId);
             target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -46,9 +47,9 @@ export default function Header() {
                         </Link>
                         <ul className="nav-links">
                             <li><Link href="/">Home</Link></li>
-                            <li><a href="#about" onClick={smoothScroll}>About</a></li>
+                            <li><a href="#" data-href="about" onClick={smoothScroll}>About</a></li>
                             <li><Link href="/menu">Menu</Link></li>
-                            <li><a href="#gallery" onClick={smoothScroll}>Gallery</a></li>
+                            <li><a href="#" data-href="gallery" onClick={smoothScroll}>Gallery</a></li>
                             <li><Link href="/order">Online Order</Link></li>
                             <li><Link href="/contact">Contact</Link></li>
                         </ul>
@@ -59,6 +60,9 @@ export default function Header() {
                                 </li>
                                 <li className="inline-block">
                                     <Link href="/register">Register</Link>
+                                </li>
+                                <li className="inline-block">
+                                    <BtnLogout />
                                 </li>
                             </ul>
                             <ModeToggle/>
