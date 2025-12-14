@@ -14,8 +14,10 @@ const authApiRequests = {
                 Authorization: `Bearer ${sessionToken}`
             }
         }),
-    logoutFromClientToServer: () =>
-        http.post<MessageResType>('/api/auth/logout', {}, {baseUrl: ''}),
+    logoutFromClientToServer: (force?: boolean | undefined) =>
+        http.post<MessageResType>('/api/auth/logout', {
+            force
+        }, {baseUrl: ''}),
 }
 
 export default authApiRequests

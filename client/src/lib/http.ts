@@ -1,11 +1,14 @@
 import envConfig from "@/config";
 import {LoginResType} from "@/schemaValidations/auth.schema";
 import {normalizePath} from "@/lib/utils";
+import {redirect} from "next/navigation";
 
 type CustomOptions = Omit<RequestInit, 'body'> & {
     baseUrl? : string | undefined
     body?: unknown
 }
+
+const AUTH_ERROR_STATUS = 401
 
 export class HttpError<T = unknown> extends Error {
     status: number
@@ -79,7 +82,24 @@ const request = async <Response> (
         payload
     }
     if (!res.ok) {
-        throw new HttpError(data)
+        if (res.status === AUTH_ERROR_STATUS){
+            if (typeof window !== 'undefined'){
+                await fetch(`/api/auth/logout`, {
+                    method: 'POST',
+                    body: JSON.stringify({force: true}),
+                    headers: {
+                        ...baseHeaders,
+                    }
+                })
+                clientSessionToken.value = ''
+                location.href = '/login'
+            }
+            else{
+                const sessionToken = (options?.headers as any)?.Authorization.split('Bearer ')[1]
+                redirect(`/logout?sessionToken=${sessionToken}`)
+            }
+        }
+        else throw new HttpError(data)
     }
     // đảm bảo chỉ chạy trên client side (brơwser)
     if (typeof window !== 'undefined') {
