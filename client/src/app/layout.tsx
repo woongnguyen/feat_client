@@ -8,6 +8,9 @@ import { Toaster } from "@/components/ui/sonner"
 import AppProvider from "@/app/app-provider"
 import {cookies} from "next/headers";
 
+// Force dynamic rendering để đảm bảo cookies luôn được đọc mới nhất
+export const dynamic = 'force-dynamic'
+
 const roboto_condensed = Roboto_Condensed({
     subsets: ["latin"],
     display: 'swap',
@@ -70,7 +73,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const cookieStore = cookies()
-    const sessionToken = cookieStore.get('sessionToken')
+    const accessToken = cookieStore.get('accessToken')
+    const refreshToken = cookieStore.get('refreshToken')
     return (
         <html lang="en" suppressHydrationWarning>
         <body
@@ -83,7 +87,10 @@ export default function RootLayout({
             disableTransitionOnChange
         >
             <Header/>
-            <AppProvider initialSessionToken={sessionToken?.value}>
+            <AppProvider
+                initialSessionToken={accessToken?.value}
+                initialRefreshToken={refreshToken?.value}
+            >
                 {children}
             </AppProvider>
             <Footer/>

@@ -1,7 +1,4 @@
-import { TokenPayload } from '@/types/jwt.types'
 import { Account } from '@prisma/client'
-import { type FastifyRequest, FastifyInstance, FastifyReply } from 'fastify'
-
 declare global {
   interface BigInt {
     toJSON(): string
@@ -14,6 +11,8 @@ declare module 'fastify' {
     account?: Account
     cookies: {
       sessionToken?: string
+      accessToken?: string
+      refreshToken?: string
     }
   }
 }

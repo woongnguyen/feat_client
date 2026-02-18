@@ -22,7 +22,8 @@ export type RegisterBodyType = z.TypeOf<typeof RegisterBody>
 
 export const RegisterRes = z.object({
   data: z.object({
-    token: z.string(),
+    accessToken: z.string(),
+    refreshToken: z.string(),
     expiresAt: z.string(),
     account: z.object({
       id: z.number(),
@@ -47,6 +48,28 @@ export type LoginBodyType = z.TypeOf<typeof LoginBody>
 export const LoginRes = RegisterRes
 
 export type LoginResType = z.TypeOf<typeof LoginRes>
+
+// Refresh Token schemas
+export const RefreshTokenBody = z
+  .object({
+    refreshToken: z.string()
+  })
+  .strict()
+
+export type RefreshTokenBodyType = z.TypeOf<typeof RefreshTokenBody>
+
+export const RefreshTokenRes = z.object({
+  data: z.object({
+    accessToken: z.string(),
+    refreshToken: z.string(),
+    expiresAt: z.string()
+  }),
+  message: z.string()
+})
+
+export type RefreshTokenResType = z.TypeOf<typeof RefreshTokenRes>
+
+// Legacy Slide Session (backward compatibility)
 export const SlideSessionBody = z.object({}).strict()
 
 export type SlideSessionBodyType = z.TypeOf<typeof SlideSessionBody>

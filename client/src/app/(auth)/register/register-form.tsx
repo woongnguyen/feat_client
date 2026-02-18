@@ -32,7 +32,10 @@ export default function RegisterForm() {
     async function onSubmit(values: RegisterBodyType) {
         const result = await auth.register(values)
         toast(result?.payload?.message)
-        await authApiRequests.auth({sessionToken: result.payload.data.token})
+        await authApiRequests.auth({
+            accessToken: result.payload.data.accessToken,
+            refreshToken: result.payload.data.refreshToken
+        })
         route.push('/me')
     }
     return (

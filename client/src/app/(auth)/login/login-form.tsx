@@ -30,7 +30,10 @@ export default function LoginForm() {
         try{
             const result = await authApiRequests.login(values)
             toast(result?.payload?.message)
-            await authApiRequests.auth({sessionToken: result.payload.data.token})
+            await authApiRequests.auth({
+                accessToken: result.payload.data.accessToken,
+                refreshToken: result.payload.data.refreshToken
+            })
             route.push('/me')
         }
         catch (error: unknown) {

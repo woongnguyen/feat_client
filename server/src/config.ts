@@ -19,8 +19,19 @@ checkEnv()
 const configSchema = z.object({
   PORT: z.coerce.number().default(4000),
   DATABASE_URL: z.string(),
+
+  // Access Token
+  ACCESS_TOKEN_SECRET: z.string(),
+  ACCESS_TOKEN_EXPIRES_IN: z.string(),
+
+  // Refresh Token
+  REFRESH_TOKEN_SECRET: z.string(),
+  REFRESH_TOKEN_EXPIRES_IN: z.string(),
+
+  // Legacy Session Token
   SESSION_TOKEN_SECRET: z.string(),
   SESSION_TOKEN_EXPIRES_IN: z.string(),
+
   DOMAIN: z.string(),
   PROTOCOL: z.string(),
   UPLOAD_FOLDER: z.string(),
